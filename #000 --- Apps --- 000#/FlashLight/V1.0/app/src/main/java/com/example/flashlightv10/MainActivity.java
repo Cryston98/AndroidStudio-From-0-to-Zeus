@@ -7,6 +7,7 @@ import androidx.core.content.ContextCompat;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.hardware.camera2.CameraAccessException;
 import android.hardware.camera2.CameraManager;
@@ -51,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
         activateObserver();
         openCredit();
         openRatingAppp();
+        hideNavBar();
     }
     private void initComponents(){
         imgBtn = findViewById(R.id.imgBTN);
@@ -164,6 +166,11 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    private void hideNavBar(){
+        View decorView = getWindow().getDecorView();
+        int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION |View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN| View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY ;
+        decorView.setSystemUiVisibility(uiOptions);
+    }
 
     /*
     <a href="https://www.flaticon.com/free-icons/shock" title="shock icons">Shock icons created by Freepik - Flaticon</a>
