@@ -4,8 +4,163 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/connectBT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Connect BT"></Button>
 
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_toEndOf="@+id/connectBT"
+        android:id="@+id/btPermision"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BT:ON"></TextView>
+
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_toEndOf="@+id/btPermision"
+        android:id="@+id/btaPermision"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BT:ON"></TextView>
+
+    <ListView
+        android:layout_below="@id/connectBT"
+        android:id="@+id/pairDeviceListUI"
+        android:layout_above="@+id/ticToc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/ticToc"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:layout_margin="20px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/layoutRow1"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:background="@color/teal_200"
+                android:id="@+id/item11"
+                android:layout_margin="10dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp">
+            </ImageView>
+
+            <ImageView
+                android:background="@color/teal_200"
+                android:id="@+id/item12"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp">
+            </ImageView>
+
+            <ImageView
+                android:background="@color/teal_200"
+                android:id="@+id/item13"
+                android:layout_margin="10dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp">
+            </ImageView>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/lineRow1"
+            android:layout_below="@+id/layoutRow1"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="@color/teal_700"></ImageView>
+
+        <LinearLayout
+            android:id="@+id/layoutRow2"
+            android:layout_below="@+id/lineRow1"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:background="@color/teal_200"
+                android:id="@+id/item21"
+                android:layout_margin="10dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp">
+            </ImageView>
+
+            <ImageView
+                android:background="@color/teal_200"
+                android:id="@+id/item22"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp">
+            </ImageView>
+
+            <ImageView
+                android:background="@color/teal_200"
+                android:id="@+id/item23"
+                android:layout_margin="10dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp">
+            </ImageView>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/lineRow2"
+            android:layout_below="@+id/layoutRow2"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="@color/teal_700"></ImageView>
+
+        <LinearLayout
+            android:id="@+id/layoutRow3"
+            android:layout_below="@+id/lineRow2"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:background="@color/teal_200"
+                android:id="@+id/item31"
+                android:layout_margin="10dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp">
+            </ImageView>
+
+            <ImageView
+                android:background="@color/teal_200"
+                android:id="@+id/item32"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp">
+            </ImageView>
+
+            <ImageView
+                android:background="@color/teal_200"
+                android:id="@+id/item33"
+                android:layout_margin="10dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp">
+            </ImageView>
+
+        </LinearLayout>
+    </RelativeLayout>
 
 </RelativeLayout>
