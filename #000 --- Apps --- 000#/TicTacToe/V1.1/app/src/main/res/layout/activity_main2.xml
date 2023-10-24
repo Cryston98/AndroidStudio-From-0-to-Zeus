@@ -7,12 +7,48 @@
     tools:context=".MainActivity2">
 
     <Button
-        android:layout_margin="10dp"
         android:id="@+id/scan_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Scan"
-        ></Button>
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Scan"></Button>
+
+    <Button
+        android:textColor="@color/white"
+        android:text="C B"
+        android:id="@+id/btc_status"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_toLeftOf="@+id/bta_status"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content">
+    </Button>
+
+    <Button
+        android:textColor="@color/white"
+        android:text="A B"
+        android:id="@+id/bta_status"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_toLeftOf="@+id/bt_status"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content">
+    </Button>
+
+    <Button
+        android:id="@+id/bt_status"
+        android:textColor="@color/white"
+        android:text="BT"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content">
+    </Button>
+
 
     <ListView
         android:layout_below="@+id/scan_btn"

@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameBoard">
+
+
+    <RelativeLayout
+            android:layout_marginTop="30dp"
+            android:id="@+id/statusSectionComp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:id="@+id/imgComp"
+                android:backgroundTint="#ff0000"
+                android:background="@drawable/radio"
+                android:layout_width="30dp"
+                android:layout_height="30dp">
+            </ImageView>
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/imgComp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Computer : "
+                android:textColor="@color/neo"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:id="@+id/compWin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Win : 0 "
+                android:textAlignment="center"
+                android:textColor="@color/neo"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/boardID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/statusSectionComp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/elem11"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/black"
+            android:onClick="setData()"
+            android:tag="1"></ImageView>
+
+        <ImageView
+            android:id="@+id/elem12"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@id/elem11"
+            android:background="@color/black"
+            android:tag="2"></ImageView>
+
+        <ImageView
+            android:id="@+id/elem13"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@id/elem12"
+            android:background="@color/black"
+            android:tag="3"></ImageView>
+
+
+        <ImageView
+            android:id="@+id/elem21"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@+id/elem11"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/black"
+            android:tag="4"></ImageView>
+
+        <ImageView
+            android:id="@+id/elem22"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@+id/elem11"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@id/elem21"
+            android:background="@color/black"
+            android:tag="5"></ImageView>
+
+        <ImageView
+            android:id="@+id/elem23"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@+id/elem12"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@id/elem12"
+            android:background="@color/black"
+            android:tag="6"></ImageView>
+
+
+        <ImageView
+            android:id="@+id/elem31"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@+id/elem21"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/black"
+            android:tag="7"></ImageView>
+
+        <ImageView
+            android:id="@+id/elem32"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@+id/elem21"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@id/elem21"
+            android:background="@color/black"
+            android:tag="8"></ImageView>
+
+        <ImageView
+            android:id="@+id/elem33"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@+id/elem22"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@id/elem12"
+            android:background="@color/black"
+            android:tag="9"></ImageView>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_below="@+id/boardID"
+        android:layout_marginTop="20dp"
+        android:id="@+id/statusSectionPlayer"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/imgPlayer"
+            android:backgroundTint="#2196F3"
+            android:background="@drawable/clear"
+            android:layout_width="30dp"
+            android:layout_height="30dp">
+        </ImageView>
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@+id/imgPlayer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Player : "
+            android:textColor="@color/neo"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/playWin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Win : 0 "
+            android:textAlignment="center"
+            android:textColor="@color/neo"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/statusSectionPlayer"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <Button
+            android:gravity="center"
+            android:enabled="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/resetGame"
+            android:text="Reset Game"></Button>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_margin="40dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="This app was developed by Dr.Andy and you can find new update of this app on Mystic Ether account on google play."
+            android:textAlignment="center"
+            android:textColor="#930F0F"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+</RelativeLayout>
