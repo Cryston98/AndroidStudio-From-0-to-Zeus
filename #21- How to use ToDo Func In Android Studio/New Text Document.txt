@@ -1,0 +1,22 @@
++ utilizarea functie de ToDo in IDE android studio este utiliza pt dezvoltatori atunci cand vor sa tina mine un lucru pe care vor sa il implementeze dar o lasa pt mai tarziu ...Defapt este o gruparea a comentariolor...
+
+Pt a utiliza aceasta fucntionalitat ein fisiere de tip activity .java se screie 
+"//TODO: _un_comentariu al nostru" - fara ghilimenle.. ia dupa o sa vezi ca acest comentariu o sa apara in tab de ToDo de langa Tabul terminal din partea de jos a ecranului.
+
+
+Funcția TODO în Android Studio (și în majoritatea mediilor de dezvoltare) este folosită pentru a marca părți ale codului care necesită atenție ulterioară sau care trebuie finalizate mai târziu. Este utilă pentru a face un plan pentru dezvoltare sau pentru a marca sarcini neterminate. Iată cum să o folosești:
+
+În codul tău, poți adăuga un comentariu TODO pentru a marca o sarcină neterminată sau o notă despre ceea ce trebuie să faci mai târziu. De exemplu:
+
+JAVA & KOTLIN: // TODO: Rezolvă această problemă
+XML : <!-- TODO: Adaugă stilizarea aici -->
+
+Pentru a vedea toate adnotările TODO din proiectul tău, poți folosi panoul "TODO" din Android Studio:
+
+Deschide "View" în meniul principal.
+Navighează la "Tool Windows".
+Selectează "TODO".
+Acest panou va afișa toate locurile unde ai adăugat comentarii TODO în proiect.
+
+
+Din panoul "TODO," poți face dublu clic pe o intrare pentru a naviga direct la locul unde ai adăugat adnotarea TODO.
