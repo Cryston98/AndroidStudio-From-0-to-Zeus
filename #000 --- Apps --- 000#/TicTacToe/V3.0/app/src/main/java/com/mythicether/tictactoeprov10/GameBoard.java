@@ -9,6 +9,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -25,6 +26,10 @@ public class GameBoard extends AppCompatActivity {
     ImageView e1,e2,e3,e4,e5,e6,e7,e8,e9;
     boolean playTurn = true;
     ArrayList<Boolean> filledBox = new ArrayList<Boolean>();
+    ArrayList<Integer> myStepsGame = new ArrayList<Integer>();
+    ArrayList<Integer> compStepsGame = new ArrayList<Integer>();
+    private int idOfMove=0;
+    private int roundGame=0;
     int totalGamesPlayed=0, winGamesByComp=0,winGamesByPlayer=0;
     String winnerID="NO";
     TextView playWin,compWin;
@@ -54,6 +59,10 @@ public class GameBoard extends AppCompatActivity {
     private void initComp(){
         for (int i=0;i<10;i++){
             filledBox.add(false);
+        }
+        for (int i=0;i<5;i++){
+            myStepsGame.add(0);
+            compStepsGame.add(0);
         }
 
         e1 = findViewById(R.id.elem11);
@@ -201,6 +210,8 @@ public class GameBoard extends AppCompatActivity {
 
                 tmp.setImageDrawable(drawable);
                 tmp.setTag("X");
+                myStepsGame.set(roundGame,idElem);
+                idOfMove++;
                 playTurn=false;
                 filledBox.set(idElem,true);
                 checkFillComplet();
@@ -266,9 +277,14 @@ public class GameBoard extends AppCompatActivity {
 
         tmp.setImageDrawable(getResources().getDrawable(R.drawable.baseline_radio_button_unchecked_24_red));
         tmp.setTag("O");
+        compStepsGame.set(roundGame,numarAleatoriu);
         filledBox.set(numarAleatoriu,true);
         playTurn=true;
+        idOfMove++;
+        roundGame++;
+
         checkFillComplet();
+
 
 
     }
@@ -321,7 +337,8 @@ public class GameBoard extends AppCompatActivity {
 
     private void  checkFillComplet(){
         boolean completGame = true;
-
+        analisysGameFlow();
+        
         if (logicGame()){
             if (winnerID == "X") {
                 winGamesByPlayer++;
@@ -1275,6 +1292,7 @@ public class GameBoard extends AppCompatActivity {
     }
 
     private void resetGame(){
+        getFlowOfGame();
         playTurn = true;
         winnerID="NO";
         resetGame.setEnabled(false);
@@ -1319,7 +1337,14 @@ public class GameBoard extends AppCompatActivity {
         {
             filledBox.set(i,false);
         }
+        for (int i=0;i<5;i++)
+        {
+            myStepsGame.set(i,0);
+            compStepsGame.set(i,0);
+        }
 
+        roundGame=0;
+        idOfMove=0;
         totalGamesPlayed++;
     }
 
@@ -1382,6 +1407,24 @@ public class GameBoard extends AppCompatActivity {
             SharedPreferences.Editor editor = sharedPreferences.edit();
             editor.putInt("insignEightPath", 1);
             editor.apply();
+        }
+    }
+    private void getFlowOfGame(){
+        String flowP="";
+        String flowC="";
+
+        for (int i=0;i<5;i++){
+          flowP = flowP +myStepsGame.get(i)+"-";
+          flowC = flowC +compStepsGame.get(i)+"-";
+         }
+        Log.e("FLOWGAME","Player:"+flowP+"--Comp:"+flowC);
+    }
+
+    private void analisysGameFlow(){
+        Toast.makeText(getApplicationContext(),"Win-"+roundGame+"--"+logicGame(),Toast.LENGTH_SHORT).show();
+        if (roundGame==3 && logicGame()){
+            //win game in 3 mutari.
+            Toast.makeText(getApplicationContext(),"nnnasndlaslnafsfa",Toast.LENGTH_SHORT).show();
         }
     }
     private void exitGame(){
