@@ -49,13 +49,41 @@
                 android:textSize="15dp"
                 android:textStyle="bold" />
 
+
+
         </RelativeLayout>
+    <LinearLayout
+        android:gravity="right"
+        android:id="@+id/dataComp"
+        android:layout_below="@+id/statusSectionComp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp">
+
+        <TextView
+            android:textColor="@color/bg"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Inteligence Level :"></TextView>
+
+        <TextView
+            android:textColor="@color/bg"
+            android:textStyle="bold"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Beginner"></TextView>
+
+    </LinearLayout>
 
     <RelativeLayout
+        android:layout_below="@+id/dataComp"
         android:id="@+id/boardID"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/statusSectionComp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
@@ -63,6 +91,7 @@
         android:gravity="center">
 
         <ImageView
+            android:scaleType="fitCenter"
             android:id="@+id/elem11"
             android:layout_width="80dp"
             android:layout_height="80dp"
@@ -70,8 +99,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
-            android:background="@color/black"
-            android:onClick="setData()"
+            android:background="@color/brg"
             android:tag="1"></ImageView>
 
         <ImageView
@@ -83,7 +111,7 @@
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
             android:layout_toRightOf="@id/elem11"
-            android:background="@color/black"
+            android:background="@color/brg"
             android:tag="2"></ImageView>
 
         <ImageView
@@ -95,7 +123,7 @@
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
             android:layout_toRightOf="@id/elem12"
-            android:background="@color/black"
+            android:background="@color/brg"
             android:tag="3"></ImageView>
 
 
@@ -108,7 +136,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
-            android:background="@color/black"
+            android:background="@color/brg"
             android:tag="4"></ImageView>
 
         <ImageView
@@ -121,7 +149,7 @@
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
             android:layout_toRightOf="@id/elem21"
-            android:background="@color/black"
+            android:background="@color/brg"
             android:tag="5"></ImageView>
 
         <ImageView
@@ -134,7 +162,7 @@
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
             android:layout_toRightOf="@id/elem12"
-            android:background="@color/black"
+            android:background="@color/brg"
             android:tag="6"></ImageView>
 
 
@@ -147,7 +175,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
-            android:background="@color/black"
+            android:background="@color/brg"
             android:tag="7"></ImageView>
 
         <ImageView
@@ -160,7 +188,7 @@
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
             android:layout_toRightOf="@id/elem21"
-            android:background="@color/black"
+            android:background="@color/brg"
             android:tag="8"></ImageView>
 
         <ImageView
@@ -173,7 +201,7 @@
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
             android:layout_toRightOf="@id/elem12"
-            android:background="@color/black"
+            android:background="@color/brg"
             android:tag="9"></ImageView>
 
 
@@ -203,13 +231,15 @@
 
         <TextView
             android:layout_marginLeft="10dp"
-            android:layout_toLeftOf="@+id/imgPlayer"
+            android:layout_toLeftOf="@id/imgPlayer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Player : "
+            android:text="Adrian"
             android:textColor="@color/neo"
             android:textSize="25dp"
             android:textStyle="bold" />
+
+
 
         <TextView
             android:layout_centerVertical="true"
@@ -225,12 +255,42 @@
             android:textStyle="bold" />
 
     </RelativeLayout>
+    <LinearLayout
+
+        android:id="@+id/dataPlay"
+        android:layout_below="@+id/statusSectionPlayer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginRight="30dp"
+
+        android:layout_marginLeft="30dp">
+
+        <TextView
+            android:textColor="@color/bg"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Rank :"></TextView>
+
+        <TextView
+
+            android:textColor="@color/bg"
+            android:textStyle="bold"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Beginner"></TextView>
+
+    </LinearLayout>
 
     <LinearLayout
-        android:layout_below="@+id/statusSectionPlayer"
+        android:id="@+id/layReset"
+        android:layout_below="@+id/dataPlay"
         android:layout_marginTop="30dp"
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
+        android:layout_marginBottom="30dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="right"
@@ -243,29 +303,18 @@
             android:layout_height="wrap_content"
             android:id="@+id/resetGame"
             android:text="Reset Game"></Button>
-    </LinearLayout>
 
-    <LinearLayout
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="30dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_margin="40dp"
-            android:layout_centerVertical="true"
-            android:layout_alignParentLeft="true"
+        <Button
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:backgroundTint="#FF0000"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:text="This app was developed by Dr.Andy and you can find new update of this app on Mystic Ether account on google play."
-            android:textAlignment="center"
-            android:textColor="#930F0F"
-            android:textSize="14dp"
-            android:textStyle="bold" />
+            android:id="@+id/exitGame"
+            android:text="Exit Game"></Button>
     </LinearLayout>
+
+
 
 
 </RelativeLayout>

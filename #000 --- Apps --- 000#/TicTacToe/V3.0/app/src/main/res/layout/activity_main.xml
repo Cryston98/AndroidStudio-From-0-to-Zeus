@@ -6,51 +6,440 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/nameGame"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
-        android:text="--- X &amp; O ---"
-        android:textAlignment="center"
-        android:textColor="@color/neo"
-        android:textSize="30dp"
-        android:textStyle="bold" />
 
-    <TextView
-        android:textColor="@color/neo"
-        android:layout_below="@+id/nameGame"
-        android:textSize="15dp"
-        android:textStyle="bold"
-        android:textAlignment="center"
-        android:layout_centerHorizontal="true"
-        android:layout_width="300dp"
+    <LinearLayout
+        android:id="@+id/headSection"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Strategic Battle of the X's &amp; the O's "
-        android:layout_marginTop="10dp"/>
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/bg"
+        android:orientation="vertical"
+        android:padding="10dp">
 
-    <Button
-        android:id="@+id/startGame"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Player VS Computer - Beginer" />
 
-    <Button
-        android:layout_below="@id/startGame"
-        android:id="@+id/startGame2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Player VS Computer - Medium " />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="0dp">
 
-    <Button
-        android:layout_below="@id/startGame2"
-        android:id="@+id/startGame3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Player VS Computer - Advance " />
+            <TextView
+                android:id="@+id/userNameUI"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:fontFamily="@font/aclonica"
+                android:lineHeight="35dp"
+                android:text="Alexandra"
+                android:textColor="@color/white"
+                android:textSize="26dp"></TextView>
+
+            <TextView
+                android:id="@+id/userExpUI"
+                android:gravity="center_vertical|right"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:fontFamily="@font/aclonica"
+                android:lineHeight="35dp"
+                android:text="+ 0 EXP"
+                android:textColor="@color/green"
+                android:textSize="17dp"></TextView>
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rankDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_marginRight="5dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/baseline_local_police_24"></ImageView>
+
+
+            <TextView
+                android:id="@+id/userRankUI"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:fontFamily="@font/aclonica"
+                android:lineHeight="35dp"
+                android:text="Rank: General"
+                android:textColor="@color/green"
+                android:textSize="17dp"></TextView>
+
+
+            <RelativeLayout
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_toLeftOf="@+id/userPosition"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/imgPozRank"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/baseline_star_half_24"></ImageView>
+
+                <TextView
+                    android:id="@+id/userPosition"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:fontFamily="@font/aclonica"
+                    android:lineHeight="35dp"
+                    android:text="7 / 7"
+                    android:textColor="@color/green"
+                    android:textSize="17dp"></TextView>
+
+
+
+            </RelativeLayout>
+
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/playFragment">
+
+
+        <TextView
+
+            android:textColor="@color/bg"
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:layout_marginTop="240dp"
+            android:gravity="center"
+            android:id="@+id/selectGameText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="~ Select Game Type ~"></TextView>
+
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:id="@+id/gametype"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/selectGameText"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="25dp">
+
+            <LinearLayout
+                android:id="@+id/playerVsComputer"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/round_bakround2"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/baseline_computer_24"></ImageView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/aclonica"
+                    android:text="Player \n VS \n Computer"
+                    android:textAlignment="center"
+                    android:textColor="@color/green"
+                    android:textSize="14dp"></TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/playerVsPlayer"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/round_bakround2"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/baseline_groups_24"></ImageView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/aclonica"
+                    android:text="Player VS Player"
+                    android:textAlignment="center"
+                    android:textColor="@color/green"
+                    android:textSize="14dp"></TextView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/statusFragment"
+        android:layout_above="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/headSection"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:visibility="gone">
+
+
+        <RelativeLayout
+            android:id="@+id/titleSectionInsigne"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/baseline_school_24"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:text="Listă Insigne"
+                android:textColor="@color/bg"
+                android:textSize="18dp"
+                android:textStyle="bold">
+            </TextView>
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:text="Total : 10 | Achived : 4"
+                android:textColor="@color/bg"
+                android:textSize="13dp"
+                android:textStyle="bold">
+            </TextView>
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/titleSectionInsigne"
+            android:id="@+id/dateInsigne"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_above="@+id/bottomNav"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_below="@id/headSection"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/otherFragment">
+
+        <Button
+            android:id="@+id/resetEightPaht"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reset 8 Path"></Button>
+
+        <LinearLayout
+            android:layout_below="@id/resetEightPaht"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/w1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="W1"></TextView>
+            <TextView
+                android:id="@+id/w2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="W1"></TextView>
+            <TextView
+                android:id="@+id/w3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="W1"></TextView>
+            <TextView
+                android:id="@+id/w4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="W1"></TextView>
+            <TextView
+                android:id="@+id/w5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="W1"></TextView>
+            <TextView
+                android:id="@+id/w6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="W1"></TextView>
+            <TextView
+                android:id="@+id/w7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="W1"></TextView>
+            <TextView
+                android:id="@+id/w8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="W1"></TextView>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:background="@color/bg"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:gravity="center"
+        android:layout_height="55dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/btnStatus"
+            android:padding="8dp"
+            android:gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/baseline_hive_24_white"></ImageView>
+            <TextView
+                android:id="@+id/statusText"
+                android:fontFamily="@font/aclonica"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:lineHeight="25dp"
+                android:text=""></TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnPlay"
+            android:padding="8dp"
+            android:gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/round_bakround"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_marginRight="5dp"
+                android:layout_gravity="center"
+                android:src="@drawable/baseline_play_circle_24"
+                android:layout_width="20dp"
+                android:layout_height="20dp"></ImageView>
+            <TextView
+                android:id="@+id/playText"
+                android:fontFamily="@font/aclonica"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:lineHeight="25dp"
+                android:text="Play"></TextView>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/btnOther"
+            android:padding="8dp"
+            android:gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_marginRight="5dp"
+                android:layout_gravity="center"
+                android:src="@drawable/baseline_settings_suggest_24"
+                android:layout_width="20dp"
+                android:layout_height="20dp"></ImageView>
+            <TextView
+                android:id="@+id/otherText"
+                android:fontFamily="@font/aclonica"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:lineHeight="25dp"
+                android:text=""></TextView>
+
+        </LinearLayout>
+
+
+
+
+
+
+    </LinearLayout>
+
 
 </RelativeLayout>

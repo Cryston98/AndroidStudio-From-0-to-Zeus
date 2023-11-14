@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SelectLevel">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#070C30"
+        android:orientation="horizontal">
+
+        <TextView
+            android:gravity="center_vertical"
+            android:textSize="16dp"
+            android:fontFamily="@font/aclonica"
+            android:textColor="@color/green"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawablePadding="6dp"
+            android:drawableLeft="@drawable/baseline_clear_all_24"
+            android:text="Select Level Game!"></TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/selectMentor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="95dp"
+            android:layout_marginRight="95dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/bg3"
+            android:drawableRight="@drawable/baseline_lock_person_24"
+            android:fontFamily="@font/aclonica"
+            android:padding="10dp"
+            android:enabled="false"
+            android:text="Level 5 - Get a Mentor"
+            android:textAlignment="center"
+            android:textColor="@color/green"></TextView>
+
+        <TextView
+            android:id="@+id/selectLegendar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="75dp"
+            android:layout_marginRight="75dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/bg3"
+            android:drawableRight="@drawable/baseline_lock_person_24"
+            android:fontFamily="@font/aclonica"
+            android:padding="10dp"
+            android:enabled="false"
+            android:text="Level 4 - Legendar"
+            android:textAlignment="center"
+            android:textColor="@color/green"></TextView>
+
+        <TextView
+            android:id="@+id/selectAdvance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="55dp"
+            android:layout_marginRight="55dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/bg3"
+            android:drawableRight="@drawable/baseline_lock_person_24"
+            android:enabled="false"
+            android:fontFamily="@font/aclonica"
+            android:padding="10dp"
+            android:text="Level 3 - Advance"
+            android:textAlignment="center"
+            android:textColor="@color/green"></TextView>
+
+        <TextView
+            android:id="@+id/selectMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:background="@color/bg3"
+            android:drawableRight="@drawable/baseline_lock_person_24"
+            android:fontFamily="@font/aclonica"
+            android:padding="10dp"
+            android:enabled="false"
+            android:text="Level 2 - Medium"
+            android:textAlignment="center"
+            android:textColor="@color/green"></TextView>
+
+
+        <TextView
+            android:id="@+id/selectBegginer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@color/bg"
+            android:drawableRight="@drawable/baseline_lock_open_24"
+            android:fontFamily="@font/aclonica"
+            android:padding="10dp"
+            android:enabled="true"
+            android:text="Level 1 - Begginer"
+            android:textAlignment="center"
+            android:textColor="@color/green"></TextView>
+
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/closeLevel"
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="30dp"
+        android:tint="@color/white"
+        android:backgroundTint="@color/grey"
+        android:src="@drawable/baseline_close_24"
+        android:layout_height="wrap_content"></com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+</RelativeLayout>

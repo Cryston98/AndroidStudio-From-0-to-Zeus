@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/bg" /> <!-- Culoarea de umplere a cercului -->
+    <corners android:radius="10dp" /> <!-- Raza cercului (100dp este doar un exemplu, puteți ajusta raza după preferințe) -->
+</shape>

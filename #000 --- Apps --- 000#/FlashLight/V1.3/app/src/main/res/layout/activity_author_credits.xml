@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AuthorCredits">
+
+
+    <LinearLayout
+        android:id="@+id/header_app"
+        android:paddingTop="20dp"
+        android:gravity="center_vertical"
+        android:background="@color/bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/titleHead"
+            android:drawableLeft="@drawable/arrow"
+            android:drawablePadding="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Credits"></TextView>
+    </LinearLayout>
+
+
+    
+    <LinearLayout
+        android:layout_below="@+id/header_app"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/itemCredits1"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:textColor="#7FF1AA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ID_APP: Turn OFf Button">
+            </TextView>
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_marginRight="10dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/off"></ImageView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:textColor="@color/bg"
+                        android:textStyle="bold"
+                        android:textSize="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Author: Mayor Icons">
+                    </TextView>
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Resoursce Name: Turn On/Off">
+                    </TextView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/url1"
+                android:textStyle="bold"
+                android:drawableLeft="@drawable/baseline_link_24"
+                android:drawablePadding="7dp"
+                android:gravity="center|right"
+                android:layout_gravity="right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="See More">
+            </TextView>
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_below="@id/itemCredits1"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="@color/bg"
+            android:contentDescription="TODO"></ImageView>
+
+        <LinearLayout
+            android:id="@+id/itemCredits2"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:textColor="#7FF1AA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ID_APP: Turn ON Button">
+            </TextView>
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_marginRight="10dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/on"></ImageView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:textStyle="bold"
+                        android:textColor="@color/bg"
+                        android:textSize="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Author: Mayor Icons">
+                    </TextView>
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Resoursce Name: Turn On/Off">
+                    </TextView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/url2"
+                android:textStyle="bold"
+                android:drawableLeft="@drawable/baseline_link_24"
+                android:drawablePadding="7dp"
+                android:gravity="center|right"
+                android:layout_gravity="right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="See More">
+            </TextView>
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_below="@id/itemCredits2"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="@color/bg"
+            android:contentDescription="TODO"></ImageView>
+
+        <LinearLayout
+            android:id="@+id/itemCredits3"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:textColor="#7FF1AA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ID_APP: Icon App">
+            </TextView>
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_marginRight="10dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/innovation"></ImageView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:textStyle="bold"
+                        android:textColor="@color/bg"
+                        android:textSize="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Author: Mayor Icons">
+                    </TextView>
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Resoursce Name: Innovation">
+                    </TextView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/url3"
+                android:textStyle="bold"
+                android:drawableLeft="@drawable/baseline_link_24"
+                android:drawablePadding="7dp"
+                android:gravity="center|right"
+                android:layout_gravity="right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="See More">
+            </TextView>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

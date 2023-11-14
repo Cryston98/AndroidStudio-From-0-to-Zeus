@@ -3,4 +3,19 @@
     <color name="black">#0DB585</color>
     <color name="white">#FFFFFFFF</color>
     <color name="neo">#0DB585</color>
+
+    <color name="bg">#0F1648</color>
+    <color name="brg">#0F1648</color>
+
+    <color name="bg3">#A60F1648</color>
+
+    <color name="bg2">#060C3A</color>
+
+    <color name="green">#ff54DDA5</color>
+
+    <color name="grey">#DADADA</color>
+
+    <color name="bg4">#65111B59</color>
+
+
 </resources>

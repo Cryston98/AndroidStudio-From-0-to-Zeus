@@ -2,8 +2,16 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.XOGameMythicEtherClearFree" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimaryVariant">@color/bg</item>
+
+        <!-- Status bar color. -->
+        <item name="android:windowTranslucentStatus" tools:targetApi="kitkat">false</item>
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+
     </style>
+
+
+
 
     <style name="Theme.XOGameMythicEtherClearFree" parent="Base.Theme.XOGameMythicEtherClearFree" />
 </resources>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        app:showAsAction="always"
+        android:id="@+id/badgets"
+        android:title="Badgets"
+        android:icon="@drawable/baseline_workspace_premium_24"></item>
+
+    <item
+        android:id="@+id/na1"
+        android:title="ROUS"
+        app:showAsAction="always"
+        android:icon="@drawable/baseline_workspace_premium_24"></item>
+
+    <item
+        app:showAsAction="always"
+        android:id="@+id/fab"
+        android:title=""
+        android:enabled="false"></item>
+
+
+    <item
+        app:showAsAction="always"
+        android:id="@+id/na2"
+        android:title="Dex"
+        android:icon="@drawable/baseline_workspace_premium_24"></item>
+
+    <item
+        app:showAsAction="always"
+        android:id="@+id/na3"
+        android:title="nI"
+        android:icon="@drawable/baseline_workspace_premium_24"></item>
+
+</menu>

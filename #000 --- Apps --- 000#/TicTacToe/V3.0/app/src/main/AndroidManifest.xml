@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.VIBRATE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,10 +15,22 @@
         android:theme="@style/Theme.XOGameMythicEtherClearFree"
         tools:targetApi="31">
         <activity
-            android:name=".GameBoard"
+            android:name=".itemRanks"
+            android:exported="false" />
+        <activity
+            android:name=".ListRanks"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SelectLevel"
+            android:exported="false" />
+        <activity
+            android:name=".GameBoard"
+            android:exported="false" />
+        <activity
+            android:name=".LoginScene"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
